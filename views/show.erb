@@ -5,7 +5,9 @@
     <span class="error"><%= flash[:message] %></span>
   </p>
 <% end %>
-
+<p>
+<%= La palabra es: #{@game.word}" %>
+</p>
 <p>
   Wrong Guesses:
   <span class="guesses"><%= @game.wrong_guesses %></span>
