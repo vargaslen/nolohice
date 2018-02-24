@@ -38,9 +38,8 @@ class HangpersonApp < Sinatra::Base
   # If a guess is invalid, set flash[:message] to "Invalid guess."
   post '/guess' do
     letter = params[:guess].to_s[0] || ''
-    p params.to_s
+    p "params.to_s: #{params.to_s}"
     # handle argument errors too
-    redirect '/show'
     begin
       if !@game.guess(letter)
         flash[:message] = "You have already used that letter"
